@@ -1,0 +1,14 @@
+.skill-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--text-500);
+  font-size: var(--fs-md);
+  font-weight: 700;
+
+  background-color: var(--foreground);
+  border: 1px solid var(--border);
+  border-radius: var(--rounded-sm);
+  padding: var(--space-sm) var(--space-md);
+  box-shadow: var(--shadow-md);
+}

@@ -1,0 +1,16 @@
+.project-card-link {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--space-xs) / 2);
+  text-decoration: none;
+  color: var(--foreground);
+  font-size: var(--fs-md);
+  font-weight: 500;
+  color: var(--text-500);
+
+  transition: color 0.1s ease-in-out;
+
+  &:hover {
+    color: var(--text-900);
+  }
+}
