@@ -7,11 +7,19 @@ export const LayoutLink: React.FC<{
   text: string;
   icon?: React.ReactNode;
   className?: string;
-}> = ({ href, text, icon, className }) => {
+  type: "navigation" | "socials";
+}> = ({ href, text, icon, className, type = "navigation" }) => {
+  const popoverClass = {
+    navigation: styles["layout-link__popover--navigation"],
+    socials: styles["layout-link__popover--socials"],
+  }[type];
+
   return (
     <Link className={`${styles["layout-link"]} ${className}`} href={href}>
       {icon}
-      <span className={styles["layout-link__text"]}>{text}</span>
+      <span className={`${styles["layout-link__popover"]} ${popoverClass}`}>
+        {text}
+      </span>
     </Link>
   );
 };

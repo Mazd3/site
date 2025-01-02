@@ -9,12 +9,15 @@ import styles from "./page.module.css";
 import { ABOUT } from "@/data/about";
 import { SKILLS } from "@/data/skills";
 import { PROJECTS } from "@/data/projects";
+import { LayoutLinkList } from "@/components/layout-link-list";
 
 export default function Home() {
   return (
     <div className={styles.layout}>
       <header className={styles.header}>
-        <Navigation />
+        <LayoutLinkList>
+          <Navigation />
+        </LayoutLinkList>
       </header>
       <main className={styles.main}>
         <AboutMe id="about" about={ABOUT} />
@@ -22,7 +25,9 @@ export default function Home() {
         <ProjectList id="projects" projects={PROJECTS} />
       </main>
       <footer className={styles.footer}>
-        <Socials />
+        <LayoutLinkList>
+          <Socials />
+        </LayoutLinkList>
       </footer>
     </div>
   );

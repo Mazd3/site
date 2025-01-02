@@ -26,6 +26,19 @@
   --rounded-lg: 1rem; /* 16px */
 
   --shadow-md: 0 5px 10px 5px rgba(0, 0, 0, 0.15);
+  --content-width: 900px;
+}
+
+@media screen and (max-width: 1400px) {
+  :root {
+    --content-width: 800px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  :root {
+    --content-width: 100%;
+  }
 }
 
 html,
@@ -43,8 +56,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   min-height: 100vh;
 }
